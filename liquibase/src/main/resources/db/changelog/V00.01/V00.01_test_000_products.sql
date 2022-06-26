@@ -1,5 +1,3 @@
-create schema postgres;
-
 create table products
 (
     id         bigserial primary key,

@@ -1,0 +1,53 @@
+//todo оставил для примера, как по-другому заполнять db
+#databaseChangeLog:
+#  #products
+#  - changeSet:
+#      id: create-table-products
+#      author: safonin
+#      preConditions:
+#        - onFail: MARK_RAN
+#      not:
+#        tableExists:
+#          tableName: products
+#      changes:
+#        - createTable:
+#            columns:
+#              - column:
+#                  autoIncrement: true
+#                  constraints:
+#                    nullable: false
+#                    primaryKey: true
+#                    primaryKeyName: pk_product_id
+#                  name: id
+#                  type: BIGSERIAL
+#              #title
+#              - column:
+#                  constraints:
+#                    nullable: false
+#                  name: title
+#                  type: VARCHAR
+#                  remarks: Наименование
+#              #price
+#              - column:
+#                  constraints:
+#                    nullable: false
+#                  name: price
+#                  type: NUMERIC
+#                  remarks: Цена
+#              #dt_created
+#              - column:
+#                  constraints:
+#                    nullable: false
+#                  name: created_at
+#                  type: TIMESTAMP
+#                  remarks: Дата и время создания
+#              #dt_last_update
+#              - column:
+#                  constraints:
+#                    nullable: false
+#                  name: updated_at
+#                  type: TIMESTAMP
+#                  remarks: Дата и время последнего обновления
+#            schemaName: test_schema
+#            tableName: products
+#            remarks: Продукты
