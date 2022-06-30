@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "WALLET")
+@Table(name = "wallets")
 @Data
 @NoArgsConstructor
 public class Wallet {
